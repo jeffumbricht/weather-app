@@ -6,5 +6,6 @@ body {
   font-family: 'Raleway', 'Roboto', 'Helvetica Neue',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(32, 32, 32);
+  background-color: #100E1D;
+  color:#E7E7EB;
 }
