@@ -1,0 +1,29 @@
+@import './../scss/mixins.scss';
+
+.weather-card {
+  @include strip-edge-margins;
+
+  padding: 18px 12px;
+  text-align: center;
+  background-color: #1E213A;
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  img {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 62px;
+  }
+
+  .tempature-range {
+    display: flex;
+    justify-content: space-around;
+
+    span:last-child {
+      color: #A09FB1;
+    }
+  }
+}

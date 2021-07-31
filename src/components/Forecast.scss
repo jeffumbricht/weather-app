@@ -1,0 +1,17 @@
+.forecast {
+  > div {
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+
+    article {
+      margin: 13px;
+      width: 100%;
+
+      @media (min-width: 375px) {
+        max-width: 120px;
+      }
+
+    }
+  }
+}
