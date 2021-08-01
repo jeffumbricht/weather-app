@@ -2,23 +2,19 @@ import './App.scss';
 import { useEffect, useState } from 'react';
 import { getWeather } from './services/mock-api';
 import Forecast from './components/Forecast';
-
+import WeatherCardToday from './components/WeatherCardToday';
 
 function App() {
 
-  const [weather, setWeather] = useState({
-    'today': null,
-    'forecast': []
-  });
+  const [weather, setWeather] = useState([]);
+  const [forecast, setForecast] = useState([]);
 
   useEffect(() => {
     // effect callback
     getWeather()
     .then(data => {
-      setWeather({
-        'today': data.consolidated_weather[0],
-        'forecast': data.consolidated_weather.slice(1)
-      });
+      setWeather({'location': data.title, ...data.consolidated_weather[0]});
+      setForecast(data.consolidated_weather.slice(1));
     });
   }, []);
 
@@ -34,11 +30,11 @@ function App() {
           </button>
         </header>
 
-        <article>Today's Weather</article>
+        <WeatherCardToday weather={weather} />
 
       </section>
 
-      <Forecast forecast={weather.forecast}/>
+      <Forecast forecast={forecast}/>
 
       <section>
         Today's highlights

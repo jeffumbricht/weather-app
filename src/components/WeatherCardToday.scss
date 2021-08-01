@@ -1,0 +1,43 @@
+.weather-card-today {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    margin-bottom: 40px;
+    max-width: 150px;
+  }
+
+  h2 {
+    margin: 0 0 22px;
+    font-size: 144px;
+
+    small {
+      color: #A09FB1;
+      font-size: 48px;
+    }
+  }
+
+  .weather-state {
+    margin-bottom: 48px;
+    color: #A09FB1;
+    font-size: 36px;
+  }
+
+  .weather-metadata {
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 18px;
+    color: #88869D;
+  }
+
+  .day-info {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+
+    span {
+      padding: 0 6px;
+    }
+  }
+}

@@ -10,8 +10,8 @@ function WeatherCard({date, forecast, high, low, weatherStateAbbr, degreeMeasure
       <h3>{d}</h3>
       <img src={process.env.PUBLIC_URL + `/img/${weatherStateAbbr}.png`} alt={weatherStateAbbr} />
       <div className="tempature-range">
-        <span>{high}&deg;{degreeMeasure}</span>
-        <span>{low}&deg;{degreeMeasure}</span>
+        <span>{parseInt(high)}&deg;{degreeMeasure}</span>
+        <span>{parseInt(low)}&deg;{degreeMeasure}</span>
       </div>
     </article>
   );
