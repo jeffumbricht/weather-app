@@ -1,14 +1,18 @@
 import './WeatherCard.scss';
+import { DateTime } from 'luxon';
 
-function WeatherCard({day, forecast, high, low}) {
+function WeatherCard({date, forecast, high, low, weatherStateAbbr, degreeMeasure="C"}) {
+  // Example: Sun, 1 Aug
+  const d = DateTime.fromISO(date).toFormat('ccc, d LLL');
+
   return (
     <article className="weather-card">
-        <h3>{day}</h3>
-        <img src={process.env.PUBLIC_URL + `/img/${forecast}.png`} alt= "" />
-        <div className="tempature-range">
-          <span>{high}</span>
-          <span>{low}</span>
-        </div>
+      <h3>{d}</h3>
+      <img src={process.env.PUBLIC_URL + `/img/${weatherStateAbbr}.png`} alt={weatherStateAbbr} />
+      <div className="tempature-range">
+        <span>{high}&deg;{degreeMeasure}</span>
+        <span>{low}&deg;{degreeMeasure}</span>
+      </div>
     </article>
   );
 }
