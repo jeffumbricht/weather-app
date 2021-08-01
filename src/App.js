@@ -33,14 +33,17 @@ function App() {
         <WeatherCardToday weather={weather} />
 
       </section>
+      <div className="content-area">
 
-      <Forecast forecast={forecast}/>
+        <Forecast forecast={forecast}/>
 
-      <section>
-        Today's highlights
-        <article>Weather stat</article>
-        <article>Weather stat</article>
-      </section>
+        <section>
+          Today's highlights
+          <article>Weather stat</article>
+          <article>Weather stat</article>
+        </section>
+
+      </div>
 
     </main>
   );

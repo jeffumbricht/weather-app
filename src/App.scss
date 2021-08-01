@@ -1,8 +1,31 @@
-.sidebar {
-  background-color: #1E213A;
+.app {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 section {
   padding: 24px;
 }
 
+.sidebar {
+  flex-basis: 100%;
+  background-color: #1E213A;
+
+  @media (min-width: 900px) {
+    min-height: 100vh;
+    flex-basis: 30%;
+  }
+}
+
+.content-area {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 900px) {
+    min-height: 100vh;
+    flex-grow: 1;
+    flex-basis: 70%;
+  }
+}
