@@ -1,17 +1,25 @@
 import './App.scss';
 import { useEffect, useState } from 'react';
-import { getForecast } from './services/mock-api';
+import { getWeather } from './services/mock-api';
 import Forecast from './components/Forecast';
 
 
 function App() {
 
-  const [forecast, setForecast] = useState([]);
+  const [weather, setWeather] = useState({
+    'today': null,
+    'forecast': []
+  });
 
   useEffect(() => {
     // effect callback
-    getForecast()
-    .then(data => setForecast(data.consolidated_weather));
+    getWeather()
+    .then(data => {
+      setWeather({
+        'today': data.consolidated_weather[0],
+        'forecast': data.consolidated_weather.slice(1)
+      });
+    });
   }, []);
 
   return (
@@ -30,7 +38,7 @@ function App() {
 
       </section>
 
-      <Forecast forecast={forecast}/>
+      <Forecast forecast={weather.forecast}/>
 
       <section>
         Today's highlights

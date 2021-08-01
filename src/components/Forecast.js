@@ -7,9 +7,9 @@ function Forecast({forecast}) {
     <section className="forecast">
       <h2>{forecast.length} Day Forecast</h2>
       <div>
-        {/* {forecast.map(item => <div>{item.id}</div>)} */}
         {forecast.map(item =>
           <WeatherCard
+            key={item.id}
             date={item.applicable_date}
             forecast="LightCloud"
             high={parseInt(item.max_temp)}
@@ -22,4 +22,3 @@ function Forecast({forecast}) {
 }
 
 export default Forecast;
-
