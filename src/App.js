@@ -7,8 +7,8 @@ import WeatherCardToday from './components/WeatherCardToday';
 
 function App() {
 
-  const [weather, setWeather] = useState([]);
-  const [forecast, setForecast] = useState([]);
+  const [weather, setWeather] = useState(null);
+  const [forecast, setForecast] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
