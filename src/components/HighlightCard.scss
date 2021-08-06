@@ -32,3 +32,37 @@
     width: 12px;
   }
 }
+
+.percentage-bar {
+  margin: 0 auto;
+  width: 80%;
+  font-size: 12px;
+  font-weight: bold;
+  color: #A09FB1;
+
+  .upper-labels {
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bar {
+    margin-bottom: 4px;
+    height: 8px;
+    border-radius: 8px;
+    overflow: hidden; // prevent children overflow from rounded corners
+    line-height: 0;
+    text-align: left;
+    background-color: #E7E7EB;
+
+    span {
+      height: 100%;
+      display: inline-block;
+      background-color: #FFEC65;
+    }
+  }
+
+  .lower-labels {
+    text-align: right;
+  }
+}

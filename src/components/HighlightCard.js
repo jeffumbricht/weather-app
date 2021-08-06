@@ -23,6 +23,20 @@ function HighlightCard({title, stat, statSuffix, windDirectionCompass, windDirec
       </div>
       }
 
+      {title === 'Humidity' &&
+      <div className="percentage-bar">
+        <div className="upper-labels">
+          <div>0</div>
+          <div>50</div>
+          <div>100</div>
+        </div>
+        <div className="bar">
+          <span style={{width: `${stat}%`}}></span>
+        </div>
+        <div className="lower-labels">%</div>
+      </div>
+      }
+
     </article>
   );
 }
