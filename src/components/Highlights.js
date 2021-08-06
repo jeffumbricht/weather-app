@@ -5,6 +5,7 @@ function Highlights({weather}) {
 
   const {
     wind_speed,
+    wind_direction,
     wind_direction_compass,
     humidity,
     visibility,
@@ -20,6 +21,8 @@ function Highlights({weather}) {
             title="Wind status"
             stat={parseFloat(wind_speed).toFixed(1)}
             statSuffix="mph"
+            windDirectionCompass={wind_direction_compass}
+            windDirectionRotation={wind_direction}
             />
         </div>
         <div>
