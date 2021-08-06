@@ -1,15 +1,12 @@
 @import './../scss/mixins.scss';
 
 .weather-card {
-  @include strip-edge-margins;
+  @include make-card;
 
   padding: 18px 12px;
-  text-align: center;
-  background-color: #1E213A;
 
   h3 {
     margin-bottom: 10px;
-    font-size: 16px;
   }
 
   img {

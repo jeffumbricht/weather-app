@@ -19,3 +19,10 @@
   clip-path: inset(50%);
   border: 0;
 }
+
+@mixin make-card() {
+  @include strip-edge-margins;
+
+  text-align: center;
+  background-color: #1E213A;
+}

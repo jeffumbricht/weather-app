@@ -7,7 +7,10 @@ function WeatherCardToday({weather}) {
   return (
     <article className="weather-card-today">
       <img src={process.env.PUBLIC_URL + `/img/${weather.weather_state_abbr}.png`} alt={weather.weather_state_abbr} />
-      <h2>{parseInt(weather.the_temp)}<small>&deg;C</small></h2>
+      <h2 className="sr-only">Today's Weather</h2>
+      <div className="weather-current-temp">
+        {parseInt(weather.the_temp)}<small>&deg;C</small>
+      </div>
       <div className="weather-state">
         {weather.weather_state_name}
       </div>

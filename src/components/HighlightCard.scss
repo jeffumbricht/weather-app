@@ -1,0 +1,18 @@
+@import './../scss/mixins.scss';
+
+.highlight-card {
+  @include make-card;
+
+  padding: 22px 35px;
+}
+
+.highlight-stat {
+  margin-bottom: 32px;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.highlight-stat-suffix {
+  font-size: 36px;
+  font-weight: 500;
+}
