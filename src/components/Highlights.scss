@@ -8,18 +8,22 @@
   .highlights-row {
     margin-right: -24px;
     margin-left: -24px;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
 
     > div {
-      margin-bottom: 48px;
+      margin-bottom: 32px;
       padding-right: 24px;
       padding-left: 24px;
-      flex: 50% 1;
+      flex: 100% 1;
 
-      > div {
+      @media (min-width: 576px) {
+        margin-bottom: 48px;
+        flex: 50% 1;
+      }
 
+      > article {
+        height: 100%;
       }
     }
   }

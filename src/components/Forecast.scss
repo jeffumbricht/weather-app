@@ -1,12 +1,23 @@
 .forecast {
-  > div {
-    padding: 16px;
+  width: 100%;
+
+  .forecast-row {
+    margin-right: -13px;
+    margin-left: -13px;
     display: flex;
     flex-wrap: wrap;
 
-    article {
-      margin: 13px;
-      width: 120px;
+    > div {
+      padding: 13px;
+      flex: 50% 0;
+
+      @media (min-width: 992px) {
+        flex: 33% 0;
+      }
+
+      @media (min-width: 1400px) {
+        flex: 20% 1;
+      }
     }
   }
 }

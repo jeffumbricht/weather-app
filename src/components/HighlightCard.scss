@@ -3,13 +3,15 @@
 .highlight-card {
   @include make-card;
 
-  padding: 22px 35px;
+  padding: 22px;
 }
 
 .highlight-stat {
+  margin-top: 0.2em; // compensate for smaller line-height
   margin-bottom: 32px;
   font-size: 64px;
   font-weight: 700;
+  line-height: 0.8em;
 }
 
 .highlight-stat-suffix {
