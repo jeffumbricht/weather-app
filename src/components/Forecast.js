@@ -1,13 +1,12 @@
-import './Forecast.scss';
-import WeatherCard from './WeatherCard';
+import "./Forecast.scss";
+import WeatherCard from "./WeatherCard";
 
-function Forecast({forecast}) {
-
+function Forecast({ forecast }) {
   return (
     <section className="forecast">
       <h2>{forecast.length} Day Forecast</h2>
       <div className="forecast-row">
-        {forecast.map(item =>
+        {forecast.map((item) => (
           <div>
             <WeatherCard
               key={item.id}
@@ -15,9 +14,10 @@ function Forecast({forecast}) {
               forecast="LightCloud"
               high={item.max_temp}
               low={item.min_temp}
-              weatherStateAbbr={item.weather_state_abbr}/>
+              weatherStateAbbr={item.weather_state_abbr}
+            />
           </div>
-          )}
+        ))}
       </div>
     </section>
   );

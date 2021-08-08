@@ -1,4 +1,4 @@
-@import './../scss/mixins.scss';
+@import "./../scss/mixins.scss";
 
 .weather-card {
   @include make-card;
@@ -20,7 +20,7 @@
     justify-content: space-around;
 
     span:last-child {
-      color: #A09FB1;
+      color: #a09fb1;
     }
   }
 }

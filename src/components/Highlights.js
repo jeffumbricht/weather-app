@@ -1,15 +1,14 @@
-import './Highlights.scss';
-import HighlightCard from './HighlightCard';
+import "./Highlights.scss";
+import HighlightCard from "./HighlightCard";
 
-function Highlights({weather}) {
-
+function Highlights({ weather }) {
   const {
     wind_speed,
     wind_direction,
     wind_direction_compass,
     humidity,
     visibility,
-    air_pressure
+    air_pressure,
   } = weather;
   console.log(weather);
   return (
@@ -23,28 +22,24 @@ function Highlights({weather}) {
             statSuffix="mph"
             windDirectionCompass={wind_direction_compass}
             windDirectionRotation={wind_direction}
-            />
+          />
         </div>
         <div>
-          <HighlightCard
-            title="Humidity"
-            stat={humidity}
-            statSuffix="%"
-            />
+          <HighlightCard title="Humidity" stat={humidity} statSuffix="%" />
         </div>
         <div>
           <HighlightCard
             title="Visibility"
             stat={parseFloat(visibility).toFixed(1)}
             statSuffix="Miles"
-            />
+          />
         </div>
         <div>
           <HighlightCard
             title="Air Pressure"
             stat={air_pressure}
             statSuffix="mb"
-            />
+          />
         </div>
       </div>
     </section>

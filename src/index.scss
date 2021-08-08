@@ -1,6 +1,6 @@
 @import-normalize;
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;500;700&display=swap');
-@import './scss/mixins.scss';
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;500;700&display=swap");
+@import "./scss/mixins.scss";
 
 * {
   box-sizing: border-box;
@@ -8,11 +8,11 @@
 
 body {
   margin: 0;
-  font-family: 'Raleway', 'Roboto', 'Helvetica Neue',sans-serif;
+  font-family: "Raleway", "Roboto", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #100E1D;
-  color:#E7E7EB;
+  background-color: #100e1d;
+  color: #e7e7eb;
   font-weight: 500;
 }
 

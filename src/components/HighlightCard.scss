@@ -1,4 +1,4 @@
-@import './../scss/mixins.scss';
+@import "./../scss/mixins.scss";
 
 .highlight-card {
   @include make-card;
@@ -38,7 +38,7 @@
   width: 80%;
   font-size: 12px;
   font-weight: bold;
-  color: #A09FB1;
+  color: #a09fb1;
 
   .upper-labels {
     margin-bottom: 2px;
@@ -53,12 +53,12 @@
     overflow: hidden; // prevent children overflow from rounded corners
     line-height: 0;
     text-align: left;
-    background-color: #E7E7EB;
+    background-color: #e7e7eb;
 
     span {
       height: 100%;
       display: inline-block;
-      background-color: #FFEC65;
+      background-color: #ffec65;
     }
   }
 

@@ -14,7 +14,7 @@
   height: 1px;
   padding: 0;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   clip-path: inset(50%);
   border: 0;
@@ -24,5 +24,5 @@
   @include strip-edge-margins;
 
   text-align: center;
-  background-color: #1E213A;
+  background-color: #1e213a;
 }
