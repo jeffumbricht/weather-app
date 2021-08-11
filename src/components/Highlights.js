@@ -10,7 +10,7 @@ function Highlights({ weather }) {
     visibility,
     air_pressure,
   } = weather;
-  console.log(weather);
+
   return (
     <section className="highlights">
       <h2>Today's Highlights</h2>

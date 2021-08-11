@@ -8,20 +8,18 @@ import WeatherCardToday from "./components/WeatherCardToday";
 function App() {
   const [weather, setWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     // effect callback
     getWeather().then((data) => {
-      setWeather({ location: data.title, ...data.consolidated_weather[0] });
       setForecast(data.consolidated_weather.slice(1));
-      setIsLoaded(true);
+      setWeather({ location: data.title, ...data.consolidated_weather[0] });
     });
   }, []);
 
   return (
     <main className="app">
-      {isLoaded ? (
+      {weather && forecast ? (
         <>
           <section className="sidebar">
             <header>

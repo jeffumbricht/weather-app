@@ -7,9 +7,8 @@ function Forecast({ forecast }) {
       <h2>{forecast.length} Day Forecast</h2>
       <div className="forecast-row">
         {forecast.map((item) => (
-          <div>
+          <div key={item.id}>
             <WeatherCard
-              key={item.id}
               date={item.applicable_date}
               forecast="LightCloud"
               high={item.max_temp}
