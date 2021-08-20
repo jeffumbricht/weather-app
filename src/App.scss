@@ -1,7 +1,17 @@
 .app {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.sidebar {
+  background-color: var(--bg-color-light);
+
+  @media (min-width: 992px) {
+    min-height: 100vh;
+  }
 }
 
 .content-area {
@@ -9,27 +19,5 @@
 
   @media (min-width: 992px) {
     padding: 0 124px;
-  }
-}
-
-.sidebar {
-  flex-basis: 100%;
-  background-color: var(--bg-color-light);
-
-  @media (min-width: 992px) {
-    min-height: 100vh;
-    flex-basis: 30%;
-  }
-}
-
-.content-area {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  @media (min-width: 992px) {
-    min-height: 100vh;
-    flex-grow: 1;
-    flex-basis: 70%;
   }
 }
