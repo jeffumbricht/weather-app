@@ -24,5 +24,5 @@
   @include strip-edge-margins;
 
   text-align: center;
-  background-color: #1e213a;
+  background-color: var(--bg-color-light);
 }

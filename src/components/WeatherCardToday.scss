@@ -13,14 +13,14 @@
     font-size: 144px;
 
     small {
-      color: #a09fb1;
+      color: var(--text-color-deemphasized);
       font-size: 48px;
     }
   }
 
   .weather-state {
     margin-bottom: 48px;
-    color: #a09fb1;
+    color: var(--text-color-deemphasized);
     font-size: 36px;
   }
 

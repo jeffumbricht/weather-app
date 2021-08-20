@@ -38,7 +38,7 @@
   width: 80%;
   font-size: 12px;
   font-weight: bold;
-  color: #a09fb1;
+  color: var(--text-color-deemphasized);
 
   .upper-labels {
     margin-bottom: 2px;
@@ -53,7 +53,7 @@
     overflow: hidden; // prevent children overflow from rounded corners
     line-height: 0;
     text-align: left;
-    background-color: #e7e7eb;
+    background-color: var(--text-color);
 
     span {
       height: 100%;
